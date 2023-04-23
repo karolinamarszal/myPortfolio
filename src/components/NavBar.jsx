@@ -59,7 +59,7 @@ const NavBar = () => {
             onClick={()=> onUpdateActiveLink("projects")}>Projects</Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <button className={scrolled ? "button-scrolled vvd" : "vvd"} onClick={()=> console.log("connect")}><span>Let's Connect</span></button>
+            <button className={scrolled ? "button-scrolled" : ""} onClick={()=> console.log("connect")}><span>Let's Connect</span></button>
           </span>
           </Navbar.Collapse> 
       </Container>
