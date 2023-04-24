@@ -42,7 +42,7 @@ const Projects = ()=> {
             <h2>Projects</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit aperiam rerum vel. At maxime labore, esse ut numquam tenetur odio fugiat omnis minus? Doloribus optio eligendi id quo molestiae.</p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+              <Nav variant="pills" className="nav-pills mb-5" id="pills-tab">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Tab One</Nav.Link>
                 </Nav.Item>
@@ -62,7 +62,7 @@ const Projects = ()=> {
                     }
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second"><h3>More projects will be added</h3></Tab.Pane>
+                <Tab.Pane eventKey="second"><h3>More projects soon...</h3></Tab.Pane>
               </Tab.Content>
             </Tab.Container>
           </Col>
