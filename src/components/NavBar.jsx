@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import classNames from "../../utils/helpers";
-import logo from "../../public/logo.png";
+import logo from "../assets/img/logo.png";
+
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -59,7 +60,9 @@ const NavBar = () => {
             onClick={()=> onUpdateActiveLink("projects")}>Projects</Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <button className={scrolled ? "button-scrolled" : ""} onClick={()=> console.log("connect")}><span>Let's Connect</span></button>
+            <a href="#connect">
+              <button className={scrolled ? "button-scrolled" : ""} onClick={()=> console.log("connect")}><span>Let's Connect</span></button>
+            </a>
           </span>
           </Navbar.Collapse> 
       </Container>
