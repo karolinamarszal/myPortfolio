@@ -4,6 +4,8 @@ import medMonitorImg from "../assets/img/medMonitorProject-img.jpg";
 import infoTradeImg from "../assets/img/infoTrade-img.jpg";
 import weatherDetectorImg from "../assets/img/weatherDetector-img.jpg";
 import salonSzykImg from "../assets/img/salonSzyk-img.jpg";
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 
 const Projects = ()=> {
@@ -39,7 +41,12 @@ const Projects = ()=> {
       <Container>
         <Row>
           <Col>
-            <h2>Projects</h2>
+            <TrackVisibility>
+            {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                <h2>Projects</h2>
+              </div>}
+            </TrackVisibility>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit aperiam rerum vel. At maxime labore, esse ut numquam tenetur odio fugiat omnis minus? Doloribus optio eligendi id quo molestiae.</p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5" id="pills-tab">
