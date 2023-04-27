@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import classNames from "../../utils/helpers";
 import logo from "../assets/img/logo.png";
+import githubLogo from "../assets/img/github-mark.svg";
 
 
 const NavBar = () => {
@@ -30,7 +31,7 @@ const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt="Logo"/>
+          <img src={logo} alt="Logo" className="hide-img"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -60,6 +61,9 @@ const NavBar = () => {
             onClick={()=> onUpdateActiveLink("projects")}>Projects</Nav.Link>
           </Nav>
           <span className="navbar-text">
+            <div className="social-icon">
+              <a href="https://github.com/karolinamarszal" target="blank"><img src={githubLogo} /></a>
+            </div>
             <a href="#connect">
               <button className={scrolled ? "button-scrolled" : ""} onClick={()=> console.log("connect")}><span>Let's Connect</span></button>
             </a>
