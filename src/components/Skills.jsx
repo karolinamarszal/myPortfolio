@@ -35,6 +35,41 @@ const Skills = () => {
     }
   };
 
+  const skills = [
+    {
+      title: "JavaScript",
+      img: JavaScriptLogo, 
+    },
+    {
+      title: "React",
+      img: ReactLogo,
+    },
+    {
+      title: "Python",
+      img: PythonLogo,
+    },
+    {
+      title: "CSS",
+      img: CssLogo,
+    },
+    {
+      title: "Sass",
+      img: SassLogo,
+    },
+    {
+      title: "Html",
+      img: HtmlLogo,
+    },
+    {
+      title: "Bootstrap",
+      img: BootstrapLogo,
+    },
+    {
+      title: "Postman",
+      img: PostmanLogo,
+    },
+  ]
+
   return (
     <section className="skill" id="skills">
       <Container>
@@ -46,38 +81,18 @@ const Skills = () => {
             </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate nobis atque. Culpa odio iusto tempora ducimus ex ut expedita eveniet voluptatem animi nihil quaerat nobis maiores, sit aut. Quae.</p>
             <Carousel responsive={responsive} infinite={true} className="skill-slider">
-              <div className="item">
-                <img src={ReactLogo} />
-                <h4>React</h4>
-              </div>
-              <div className="item">
-                <img src={JavaScriptLogo} />
-                <h4>JavaScript</h4>
-              </div>
-              <div className="item">
-                <img src={PythonLogo} />
-                <h4>Python</h4>
-              </div>
-              <div className="item">
-                <img src={CssLogo} />
-                <h4>CSS</h4>
-              </div>
-              <div className="item">
-                <img src={SassLogo} style={{width: "60%"}}/>
-                <h4 style={{marginTop: "38px"}}>Sass</h4>
-              </div>
-              <div className="item">
-                <img src={HtmlLogo} alt="Image" />
-                <h4>Html</h4>
-              </div>
-              <div className="item">
-                <img src={BootstrapLogo} style={{width: "45%"}} alt="Image" />
-                <h4>Bootstrap</h4>
-              </div>
-              <div className="item">
-                <img src={PostmanLogo} alt="Image" />
-                <h4>Postman</h4>
-              </div>
+                {
+                  skills.map((skill, index) => {
+                    return (
+                      <div className="item" key={index}>
+                        <div style={{height: "15rem", paddingBottom: "16rem"}}>
+                          <img src={skill.img}/>
+                        </div>
+                        <h4>{skill.title}</h4>
+                      </div>
+                    )
+                  })
+                }
             </Carousel>
           </div>
           </Col>
