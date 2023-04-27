@@ -36,6 +36,9 @@ const Projects = ()=> {
       link: "https://superlative-kleicha-d01528.netlify.app/",
     },
   ]
+
+
+
   return (
     <section className="project" id="projects">
       <Container>
