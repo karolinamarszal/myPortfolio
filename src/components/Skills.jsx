@@ -9,7 +9,8 @@ import SassLogo from "../assets/img/sass-logo.svg";
 import HtmlLogo from "../assets/img/html-logo.svg";
 import BootstrapLogo from "../assets/img/bootstrap-logo.svg";
 import PostmanLogo from "../assets/img/postman-logo.svg";
-
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 
 
@@ -73,28 +74,33 @@ const Skills = () => {
   return (
     <section className="skill" id="skills">
       <Container>
-        <Row>
+        <Row> 
           <Col>
-          <div className="skill-bx">
-            <h2>
-              Skills
-            </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate nobis atque. Culpa odio iusto tempora ducimus ex ut expedita eveniet voluptatem animi nihil quaerat nobis maiores, sit aut. Quae.</p>
-            <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                {
-                  skills.map((skill, index) => {
-                    return (
-                      <div className="item" key={index}>
-                        <div style={{height: "15rem", paddingBottom: "16rem"}}>
-                          <img src={skill.img}/>
-                        </div>
-                        <h4>{skill.title}</h4>
-                      </div>
-                    )
-                  })
-                }
-            </Carousel>
-          </div>
+            <TrackVisibility>
+            {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__slideInDown" : ""}>
+                <div className="skill-bx">
+                  <h2>
+                    Skills
+                  </h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate nobis atque. Culpa odio iusto tempora ducimus ex ut expedita eveniet voluptatem animi nihil quaerat nobis maiores, sit aut. Quae.</p>
+                  <Carousel responsive={responsive} infinite={true} className="skill-slider">
+                      {
+                        skills.map((skill, index) => {
+                          return (
+                            <div className="item" key={index}>
+                              <div style={{height: "15rem", paddingBottom: "16rem"}}>
+                                <img src={skill.img}/>
+                              </div>
+                              <h4>{skill.title}</h4>
+                            </div>
+                          )
+                        })
+                      }
+                  </Carousel>
+                </div>
+              </div>}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>
