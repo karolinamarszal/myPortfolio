@@ -83,7 +83,7 @@ const Skills = () => {
                   <h2>
                     Skills
                   </h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate nobis atque. Culpa odio iusto tempora ducimus ex ut expedita eveniet voluptatem animi nihil quaerat nobis maiores, sit aut. Quae.</p>
+                  <p>My skills include programming languages such as e.g. Javascript and Python, as well as expertise in web development technologies like React JS, and a strong aptitude for problem-solving and analytical thinking.</p>
                   <Carousel responsive={responsive} infinite={true} className="skill-slider">
                       {
                         skills.map((skill, index) => {
