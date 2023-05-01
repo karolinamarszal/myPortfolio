@@ -53,7 +53,7 @@ const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi I'm Karolina, `}<span className="wrap">{text}</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi illum voluptates quae ipsa voluptatum aperiam, vel dolorem odit dicta, officia excepturi! Eius fugiat porro consectetur enim recusandae, culpa explicabo sint?</p>
+                <p>As an aspiring software developer, I am dedicated to learning and improving my skills to create innovative solutions to complex problems. My knowledge and understanding of programming languages and technologies equip me with the ability to design and develop effective software applications.</p>
                 <a href="#connect">
                   <button onClick={()=> console.log("connect")}>Let's connect <ArrowRightCircle size={25}/></button>
                 </a>
