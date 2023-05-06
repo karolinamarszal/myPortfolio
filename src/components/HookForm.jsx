@@ -32,7 +32,7 @@ const HookForm = () => {
       .catch(err => {
         setMessage({
           success: false,
-          text: "The error occurred. Please try again later.",
+          text: "An error occurred. Please try again later.",
           error: err,
         })
 
