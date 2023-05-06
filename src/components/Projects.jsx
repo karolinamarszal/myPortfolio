@@ -50,7 +50,7 @@ const Projects = ()=> {
                 <h2>Projects</h2>
               </div>}
             </TrackVisibility>
-            <p>Each project has been carefully designed and executed with a specific goal in mind. Whether it's a personal project or a client project, I always approach each one with the same level of dedication and attention to detail. I hope you enjoy exploring my projects and I look forward to the opportunity to work on the next ones!</p>
+            <p>Each project has been carefully designed and executed with a specific goal in mind. Whether it's a personal project or a client project, I always approach each one with the same level of dedication and attention to detail. I hope you enjoy exploring my projects and I look forward to the opportunity to work on the new ones!</p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5" id="pills-tab">
                 <Nav.Item>
