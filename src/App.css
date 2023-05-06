@@ -544,6 +544,17 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
 	font-weight: 700;
   margin-bottom: 30px;
 }
+
+.contact h3 a {
+  font-size: 3.75rem;
+  word-wrap: break-word;
+  color: #3a5a40;
+}
+
+.contact a:hover {
+  color: #588157;
+}
+
 .contact form input, .contact form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -579,6 +590,7 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   border-radius: 10px;
   position: relative;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 .contact form button span {
   z-index: 1;
@@ -603,7 +615,7 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   width: 100%;
 }
 
-/************ Footer Css ************/
+/* Footer */
 .footer {
   padding: 40px 0;
 }
