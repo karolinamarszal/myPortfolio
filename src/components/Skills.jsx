@@ -18,7 +18,6 @@ const Skills = () => {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -72,14 +71,14 @@ const Skills = () => {
   ]
 
   return (
-    <section className="skill" id="skills">
+    <section className="skill">
       <Container>
         <Row> 
           <Col>
             <TrackVisibility>
             {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__slideInDown" : ""}>
-                <div className="skill-bx">
+                <div className="skill-bx" id="skills">
                   <h2>
                     Skills
                   </h2>
