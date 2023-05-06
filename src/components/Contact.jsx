@@ -1,57 +1,20 @@
-import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import HookForm from "./HookForm";
 import contactImg from "../assets/img/contact-img.png";import Image from 'react-bootstrap/Image';
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 
+
 const Contact = () => {
 
-  const formInitialDetails = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  }
+  const {
+    inputs, 
+    handleInputChange,
+    handleSubmit,
+    disable,
+    message,
+  } = HookForm()
 
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
-
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value
-    })
-    // setFormDetails((prevFormDetails) => {
-    //   const obj = {...prevFormDetails};
-    //   obj[category] = value;
-    //   return obj;
-    // })
-  }
-
-  const handleSubmit = async(e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-
-    console.log(result);
-
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({success: true, message: "Message sent successfully"});
-    } else {
-      setStatus({success: false, message: "Something went wrong, please try again later."})
-    };
-  }
  
   return (
     <section className="contact" id="connect">
@@ -65,28 +28,29 @@ const Contact = () => {
               </Col>
               <Col md={6}>
                 <h2>Get In Touch</h2>
-                <form onSubmit={handleSubmit}>
+                <h3 className="mb-5"><a href="mailto:karolina.softwaredeveloper@gmail.com">karolina.softwaredeveloper.com</a> </h3>
+                <form onSubmit={handleSubmit} className="form" method="POST" encType="multipart/form-data">
                   <Row>
                     <Col sm={6} className="px-1">
-                      <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate("firstName", e.target.value)} />
+                      <input type="text" name="firstName" placeholder="First Name" onChange={handleInputChange} value={inputs.firstName || ""} required disabled={disable}/>
                     </Col>
                     <Col sm={6} className="px-1">
-                      <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate("lastName", e.target.value)} />
+                      <input type="text" name="lastName" placeholder="Last Name" onChange={handleInputChange} value={inputs.lastName || ""} required disabled={disable}/>
                     </Col>
                     <Col sm={6} className="px-1">
-                      <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate("email", e.target.value)} />
+                      <input type="email" name="email" placeholder="Email Address" onChange={handleInputChange} value={inputs.email || ""} required disabled={disable}/>
                     </Col>
                     <Col sm={6} className="px-1">
-                      <input type="tel" value={formDetails.phone} placeholder="Phone" onChange={(e) => onFormUpdate("phone", e.target.value)} />
+                      <input type="tel" name="phone" placeholder="Phone" onChange={handleInputChange} value={inputs.phone || ""} disabled={disable}/>
                     </Col>
                     <Col>
-                    <textarea row="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate("message", e.target.value)}/>
-                    <button type="submit"><span>{buttonText}</span></button>
+                    <textarea row="6" name="message" placeholder="Message" onChange={handleInputChange} value={inputs.message || ""} required disabled={disable}/>
+                    <button type="submit" value="send" disabled={disable}><span>Send</span></button>
                     </Col>
                     {
-                      status.message &&
+                      message.text &&
                       <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
+                        <p className={message.success === false ? "danger" : "success"}>{message.text}</p>
                       </Col>
                     }
                   </Row>
