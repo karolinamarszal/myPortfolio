@@ -15,7 +15,7 @@ const Projects = ()=> {
       title: "MedMonitor",
       description: "Store information about your medical appointments in one place and search information about drugs.",
       imgUrl: medMonitorImg,
-      link: "https://fascinating-cheesecake-1b8359.netlify.app/",
+      link: "https://medmonitor.netlify.app/",
     },
     {
       title: "Infotrade",
@@ -33,7 +33,7 @@ const Projects = ()=> {
       title: "'Szyk' Hair Salon",
       description: "Website prepared for one of the hair salons in Poland",
       imgUrl: salonSzykImg,
-      link: "https://superlative-kleicha-d01528.netlify.app/",
+      link: "https://salonszyk.netlify.app/",
     },
   ]
 
