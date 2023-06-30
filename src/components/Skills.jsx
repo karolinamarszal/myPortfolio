@@ -10,6 +10,8 @@ import HtmlLogo from "../assets/img/html-logo.svg";
 import BootstrapLogo from "../assets/img/bootstrap-logo.svg";
 import PostmanLogo from "../assets/img/postman-logo.svg";
 import TrackVisibility from 'react-on-screen';
+import MySql from "../assets/img/mysql-official.svg";
+import BigQuery from "../assets/img/google_bigquery-icon.svg";
 import 'animate.css';
 
 
@@ -37,16 +39,24 @@ const Skills = () => {
 
   const skills = [
     {
+      title: "Python",
+      img: PythonLogo,
+    },
+    {
+      title: "MySQL",
+      img: MySql,
+    },
+    {
       title: "JavaScript",
       img: JavaScriptLogo, 
     },
     {
-      title: "React",
-      img: ReactLogo,
+      title: "Google Big Query",
+      img: BigQuery, 
     },
     {
-      title: "Python",
-      img: PythonLogo,
+      title: "React",
+      img: ReactLogo,
     },
     {
       title: "CSS",
