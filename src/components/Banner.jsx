@@ -9,7 +9,7 @@ const Banner = () => {
 
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Software Developer", "Web Developer"];
+  const toRotate = ["Data Analyst", "Data Scientist"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() *100);
   const period = 2000;
@@ -53,7 +53,7 @@ const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi I'm Karolina, `}<span className="wrap">{text}</span></h1>
-                <p>As an aspiring software developer, I am dedicated to learning and improving my skills to create innovative solutions to complex problems. My knowledge and understanding of programming languages and technologies equip me with the ability to design and develop effective software applications.</p>
+                <p>As a data analyst and an aspiring data scientist, I am dedicated to learning and improving my skills to create innovative solutions to complex problems. With a keen eye for detail and a strong analytical mindset, I excel in analyzing and interpreting data to drive informed business decisions. I use programming languages such as Python and SQL, and I am adept at leveraging various data analysis tools and techniques to uncover patterns and trends.</p>
                 <a href="#connect">
                   <button onClick={()=> console.log("connect")}>Let's connect <ArrowRightCircle size={25}/></button>
                 </a>
